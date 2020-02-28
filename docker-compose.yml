@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  database:
+    build: database
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+  server:
+    build: server
+    ports:
+      - 6464:8080
+    tty: true
+    volumes:
+      - ./server/calendar:/app

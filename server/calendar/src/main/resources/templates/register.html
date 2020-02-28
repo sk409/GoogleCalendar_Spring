@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja" layout:decorate="~{layouts/app}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <v-container layout:fragment="content">
+      <v-card>
+        <v-card-title>登録</v-card-title>
+        <v-card-text>
+          <v-form ref="form">
+            <v-text-field
+              v-model="username"
+              name="username"
+              label="ユーザ名"
+            ></v-text-field>
+            <v-text-field
+              v-model="password"
+              autocomplete
+              name="password"
+              type="password"
+              label="パスワード"
+            >
+            </v-text-field>
+            <v-text-field
+              v-model="email"
+              name="email"
+              type="email"
+              label="メールアドレス"
+            ></v-text-field>
+          </v-form>
+        </v-card-text>
+        <v-card-actions>
+          <v-btn color="accent" class="mx-auto" @click="register">登録</v-btn>
+        </v-card-actions>
+      </v-card>
+      <div class="text-center mt-3">
+        <v-btn color="primary" href="login" text>アカウントをお持ちの方</v-btn>
+      </div>
+    </v-container>
+    <div layout:fragment="scripts">
+      <script th:src="@{/js/register.js}" defer></script>
+    </div>
+  </body>
+</html>

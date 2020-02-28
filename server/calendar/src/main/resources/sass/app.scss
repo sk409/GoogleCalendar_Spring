@@ -1,0 +1,23 @@
+[v-cloak] {
+    display: none;
+}
+
+.h-45 {
+    height: 45%;
+}
+
+.w-45 {
+    width: 45%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.grid-columns-5 {
+    grid-template-columns: repeat(5, 20%);
+}
